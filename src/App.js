@@ -1,13 +1,16 @@
-import React, { Component } from 'react'
-import './App.css'
+import React, { useState } from "react"
+import "./App.css"
+import LightSwitch from "./components/LightSwitch"
 
-class App extends Component{
-  render(){
-    return(
-      <>
-        <h1>Hello World!</h1>
-      </>
-    )
-  }
+const App = () => {
+  const [lightSwitchStatus, setLightSwitchStatus] = useState("off")
+
+  return (
+    <>
+      <h1>Lightbulb Challenge</h1>
+      <LightSwitch />
+    </>
+  )
 }
+
 export default App
